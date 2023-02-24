@@ -103,23 +103,11 @@ export function calculateData(groupedData: Data) {
       let accountTotal = currentAccountData.total;
 
       if (transAction.Tipo === "Versamento" || transAction.Tipo === "Vendita") {
-        // total balance of one currency of one account
-        // console.log(+transAction.Quantità);
-        // console.log(+transAction["Quantità"]);
         accountTotal[CUR] = accountTotal[CUR] + +transAction["Valore netto"];
-        console.log(accountTotal[CUR]);
-        // let totalDeposit = +transAction.Prezzo * +transAction["Quantità"];
-        // totalDeposit = transAction.Commissioni
-        //   ? totalDeposit - +transAction.Commissioni
-        //   : totalDeposit;
-        // totalDeposit = transAction.Imposte
-        //   ? totalDeposit - +transAction.Imposte
-        //   : totalDeposit;
-        // accountTotal[CUR] = accountTotal[CUR] + totalDeposit;
       }
+
       if (transAction.Tipo === "Prelievo" || transAction.Tipo === "Acquisto") {
         accountTotal[CUR] = accountTotal[CUR] - +transAction["Valore netto"];
-        console.log(accountTotal[CUR]);
       }
     });
   }
