@@ -1,19 +1,18 @@
 ## To start
 
-# cd backend
+#### Backend
 
-# npm install
-
-# npm run dev
+cd backend
+npm install
+npm run dev
 
 (http://localhost:3555)
 
-# cd ../frontend
+#### Frontend
 
-# npm install
-
-# npm run dev
-
+cd ../frontend  
+ npm install  
+ npm run dev  
 (http://localhost:3111)
 
 ### backend node ts esm
